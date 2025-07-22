@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover and stream your favorite music genres. Musikalis - The best music platform for new artists and music lovers worldwide." />
+    <meta name="keywords" content="music, streaming, artists, genres, R&B, POP, HIP HOP, ROCK, music platform" />
+    <meta name="author" content="Musikalis" />
+    <meta property="og:title" content="Musikalis - Music Is The Shorthand Of Emotion" />
+    <meta property="og:description" content="Discover and stream your favorite music genres. The best music platform for new artists and music lovers worldwide." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://musikalis.com" />
+    <meta property="og:image" content="assets/header1.jpg" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -12,33 +23,44 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Tshego</title>
+    <title>Musikalis - Music Is The Shorthand Of Emotion</title>
   </head>
   <body>
-    <nav>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-spinner">
+        <i class="ri-music-2-line"></i>
+      </div>
+      <p>Loading your music experience...</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#" class="logo">Musik App</a>
+          <a href="#" class="logo" aria-label="Musikalis Home">Musikalis</a>
         </div>
-        <div class="nav__menu__btn" id="menu-btn">
+        <div class="nav__menu__btn" id="menu-btn" aria-label="Toggle navigation menu">
           <span><i class="ri-menu-line"></i></span>
         </div>
       </div>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#service">Services</a></li>
-        <li><a href="#client">Clients</a></li>
-        <li><a href="#advisor">Advisor</a></li>
+      <ul class="nav__links" id="nav-links" role="menubar">
+        <li role="none"><a href="#home" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" role="menuitem">About Us</a></li>
+        <li role="none"><a href="#service" role="menuitem">Services</a></li>
+        <li role="none"><a href="#client" role="menuitem">Testimonials</a></li>
+        <li role="none"><a href="#advisor" role="menuitem">Advisor</a></li>
       </ul>
       <div class="nav__btns">
-        <button class="btn">Sign Up</button>
+        <button class="btn" aria-label="Sign up for Musikalis">Sign Up</button>
       </div>
     </nav>
-    <header class="header" id="home">
+
+    <!-- Header Section -->
+    <header class="header" id="home" role="banner">
       <div class="section__container header__container">
         <div class="header__image">
-          <img src="assets/header1.jpg" alt="header" />
+          <img src="assets/header1.jpg" alt="Music visualization with vibrant colors" loading="lazy" />
         </div>
         <h1>Music Is The Shorthand</h1>
         <div class="header__content">
@@ -50,11 +72,11 @@
             very heartbeats of humanity.
           </p>
           <div class="header__btns">
-            <button class="btn">
+            <button class="btn" aria-label="Get started with Musikalis">
               Get Started
               <span><i class="ri-arrow-right-line"></i></span>
             </button>
-            <a href="#">
+            <a href="#about" aria-label="Learn more about Musikalis">
               See More
               <span><i class="ri-arrow-right-line"></i></span>
             </a>
@@ -62,56 +84,57 @@
           <div class="header__stats">
             <div class="header__stats__card">
               <h4>320K</h4>
-              <p>Customer</p>
+              <p>Active Users</p>
             </div>
             <div class="header__stats__card">
               <h4>47K</h4>
-              <p>Tracks</p>
+              <p>Premium Tracks</p>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="section__container genre__container">
-      <h2 class="section__header">Choose your favourite genre</h2>
+    <!-- Genre Section -->
+    <section class="section__container genre__container" id="service" role="region" aria-labelledby="genre-heading">
+      <h2 id="genre-heading" class="section__header">Choose your favourite genre</h2>
       <p class="section__description">
         Dive in, discover, and let the rhythms guide you to your musical
         paradise.
       </p>
       <div class="genre__grid">
-        <div class="genre__card">
+        <div class="genre__card" tabindex="0">
           <div class="genre__image">
-            <img src="assets/genre-2.webp" alt="genre" />
+            <img src="assets/genre-2.webp" alt="R&B music genre illustration" loading="lazy" />
             <div class="genre__link">
-              <a href="#"><i class="ri-arrow-right-up-line"></i></a>
+              <a href="#" aria-label="Explore R&B music"><i class="ri-arrow-right-up-line"></i></a>
             </div>
           </div>
           <h4>R&B</h4>
         </div>
-        <div class="genre__card">
+        <div class="genre__card" tabindex="0">
           <div class="genre__image">
-            <img src="assets/genre-1.jpg" alt="genre" />
+            <img src="assets/genre-1.jpg" alt="POP music genre illustration" loading="lazy" />
             <div class="genre__link">
-              <a href="#"><i class="ri-arrow-right-up-line"></i></a>
+              <a href="#" aria-label="Explore POP music"><i class="ri-arrow-right-up-line"></i></a>
             </div>
           </div>
           <h4>POP</h4>
         </div>
-        <div class="genre__card">
+        <div class="genre__card" tabindex="0">
           <div class="genre__image">
-            <img src="assets/genre-3.jpeg" alt="genre" />
+            <img src="assets/genre-3.jpeg" alt="HIP HOP music genre illustration" loading="lazy" />
             <div class="genre__link">
-              <a href="#"><i class="ri-arrow-right-up-line"></i></a>
+              <a href="#" aria-label="Explore HIP HOP music"><i class="ri-arrow-right-up-line"></i></a>
             </div>
           </div>
           <h4>HIP HOP</h4>
         </div>
-        <div class="genre__card">
+        <div class="genre__card" tabindex="0">
           <div class="genre__image">
-            <img src="assets/genre-4.jpg" alt="genre" />
+            <img src="assets/genre-4.jpg" alt="ROCK music genre illustration" loading="lazy" />
             <div class="genre__link">
-              <a href="#"><i class="ri-arrow-right-up-line"></i></a>
+              <a href="#" aria-label="Explore ROCK music"><i class="ri-arrow-right-up-line"></i></a>
             </div>
           </div>
           <h4>ROCK</h4>
@@ -119,19 +142,21 @@
       </div>
     </section>
 
-    <section class="section__container banner__container">
+    <!-- Banner Section -->
+    <section class="section__container banner__container" id="about" role="region">
       <h2>
         Musikalis is the best music platform ever created, Musikalis aims to
         give new singers a place to express their work.
       </h2>
     </section>
 
-    <section class="section__container feature__container">
+    <!-- Features Section -->
+    <section class="section__container feature__container" role="region" aria-labelledby="features-heading">
       <div class="feature__image">
-        <img src="assets/feature.jpeg" alt="feature" />
+        <img src="assets/feature.jpeg" alt="Premium music features illustration" loading="lazy" />
       </div>
       <div class="feature__content">
-        <h2 class="section__header">Best features</h2>
+        <h2 id="features-heading" class="section__header">Best features</h2>
         <ul class="feature__list">
           <li>
             <div class="feature__card">
@@ -174,20 +199,21 @@
       </div>
     </section>
 
-    <section class="client__container">
-      <h2 class="section__header">Testimonials from customers</h2>
+    <!-- Testimonials Section -->
+    <section class="client__container" id="client" role="region" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading" class="section__header">Testimonials from customers</h2>
       <p class="section__description">
         Discover what our customers have to say about their experiences with our
         music.
       </p>
       <!-- Slider main container -->
-      <div class="swiper">
+      <div class="swiper" role="region" aria-label="Customer testimonials">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
             <div class="client__card">
-              <div class="client__ratings">
+              <div class="client__ratings" aria-label="5 out of 5 stars">
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
@@ -200,7 +226,7 @@
                 tracks found on this website.
               </p>
               <div class="client__details">
-                <img src="assets/client-1.jpg" alt="client" />
+                <img src="assets/client-1.jpg" alt="David - Fitness Trainer" loading="lazy" />
                 <div>
                   <h4>David</h4>
                   <h5>Fitness Trainer</h5>
@@ -210,7 +236,7 @@
           </div>
           <div class="swiper-slide">
             <div class="client__card">
-              <div class="client__ratings">
+              <div class="client__ratings" aria-label="5 out of 5 stars">
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
@@ -223,7 +249,7 @@
                 recharge.
               </p>
               <div class="client__details">
-                <img src="assets/client-2.jpeg" alt="client" />
+                <img src="assets/client-2.jpeg" alt="Sarah - Marketing Manager" loading="lazy" />
                 <div>
                   <h4>Sarah</h4>
                   <h5>Marketing Manager</h5>
@@ -233,7 +259,7 @@
           </div>
           <div class="swiper-slide">
             <div class="client__card">
-              <div class="client__ratings">
+              <div class="client__ratings" aria-label="5 out of 5 stars">
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
@@ -246,7 +272,7 @@
                 among my students.
               </p>
               <div class="client__details">
-                <img src="assets/client-3.jpeg" alt="client" />
+                <img src="assets/client-3.jpeg" alt="Jennifer - Educator" loading="lazy" />
                 <div>
                   <h4>Jennifer</h4>
                   <h5>Educator</h5>
@@ -256,7 +282,7 @@
           </div>
           <div class="swiper-slide">
             <div class="client__card">
-              <div class="client__ratings">
+              <div class="client__ratings" aria-label="5 out of 5 stars">
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
@@ -269,7 +295,7 @@
                 available, fueling my own artistic endeavors.
               </p>
               <div class="client__details">
-                <img src="assets/client-4.jpg" alt="client" />
+                <img src="assets/client-4.jpg" alt="Michael - Music Producer" loading="lazy" />
                 <div>
                   <h4>Michael</h4>
                   <h5>Music Producer</h5>
@@ -279,7 +305,7 @@
           </div>
           <div class="swiper-slide">
             <div class="client__card">
-              <div class="client__ratings">
+              <div class="client__ratings" aria-label="5 out of 5 stars">
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
@@ -292,7 +318,7 @@
                 leaving a lasting impression.
               </p>
               <div class="client__details">
-                <img src="assets/client-5.jpeg" alt="client" />
+                <img src="assets/client-5.jpeg" alt="Emily - Event Planner" loading="lazy" />
                 <div>
                   <h4>Emily</h4>
                   <h5>Event Planner</h5>
@@ -304,9 +330,10 @@
       </div>
     </section>
 
-    <section class="section__container music__container">
+    <!-- Call to Action Section -->
+    <section class="section__container music__container" role="region" aria-labelledby="cta-heading">
       <div class="music__content">
-        <h2 class="section__header">
+        <h2 id="cta-heading" class="section__header">
           Start selling your music worldwide today
         </h2>
         <p class="section__description">
@@ -315,11 +342,11 @@
           creations on a global scale.
         </p>
         <div class="music__btns">
-          <button class="btn">
+          <button class="btn" aria-label="Get started selling your music">
             Get Started
             <span><i class="ri-arrow-right-line"></i></span>
           </button>
-          <a href="#">
+          <a href="#" aria-label="Learn more about music distribution">
             See More
             <span><i class="ri-arrow-right-line"></i></span>
           </a>
@@ -327,24 +354,30 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
       <div class="section__container footer__container">
         <ul class="footer__links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Advisor</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#advisor">Advisor</a></li>
           <li class="footer__logo">
-            <a href="#" class="logo">Musik App</a>
+            <a href="#" class="logo" aria-label="Musikalis Home">Musikalis</a>
           </li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#about">About Us</a></li>
         </ul>
       </div>
       <div class="footer__bar">
-        Copyright © Tshego. All rights reserved.
+        Copyright © 2024 Musikalis. All rights reserved.
       </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <i class="ri-arrow-up-line"></i>
+    </button>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
